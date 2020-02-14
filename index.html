@@ -1,155 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>静静</title>
-	<style>
-		*{margin: 0;padding: 0;}
-		html,body{height: 100%;}
-		body{
-			overflow: hidden;
-			display: flex;
-			background: #000;
-			perspective: 1000px;
-			transform-style: preserve-3d; 
-		}
-		#box{
-			position: relative;
-			display: flex;
-			width: 130px;
-			height: 200px;
-			margin: auto;
-			transform-style: preserve-3d; 
-			transform: rotateX(-10deg);
-		}
-		#box > div{
-			transform-style: preserve-3d; 
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			line-height: 200px;
-			font-size: 50px;
-			text-align: center;
-			box-shadow:0 0 10px #fff;
-			-webkit-box-reflect:below 10px -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.8) 100%);
-		}
-		/*  #box > div:nth-child(1){
-					background: skyblue;
-					transform: translate3d(0,0,300px) rotateY(45deg);
-				}
-				#box > div:nth-child(2){
-					background: pink;
-					transform: rotateY(0deg);
-				}
-				#box > div:nth-child(3){
-					background: purple;
-					transform: translate3d(0,0,300px) rotateY(-45deg);
-				} 
-		*/
-		#box p{
-			position: absolute;
-			left: 0;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			width: 1200px;
-			height: 1200px;
-			background: -webkit-radial-gradient(center center,600px 600px,rgba(50,50,50,1),rgba(0,0,0,0));
-			border-radius: 50%;
-			transform: rotateX(90deg) translate3d(-600px,0,-105px);
-		}
-	</style>
-</head>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <title>Document</title>
+ <embed src="http://antiserver.kuwo.cn/anti.s?rid=MUSIC_223518&response=res&format=mp3|aac&type=convert_url&br=128kmp3&agent=iPhone&callback=getlink&jpcallback=getlink.mp3" hidden="true" autostart="true" loop="true">
+  <style>
+   body{margin:0px;}
+   p{margin:0px;}
+   h6{margin:0px;}
+ 
+   .box{
+    width:907px ;
+	height:680px ;
+	background: ;
+    margin:50px auto ;
+   }
+   .item{
+    width:899px ;
+	height:180px ;
+	float:right;
+   }
+   .big{width:900px;
+     height:300px;
+	 background:;
+	 margin:0px auto}
+   .small{width:260px;height:280px;background:#003366;float:right;margin:0px 20px;}
+    .miss{width:640px; height:1600px;
+   background-image:url(images/bj7.jpg);
+   margin:0px auto;}
+  </style>
+ </head>
 <body>
-<div id="box">
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<p></p>
-</div>
-<script>
-setTimeout(init,100);
-function init(){
-	var obox = document.getElementById('box'),
-		aDiv = obox.getElementsByTagName('div');
-		
-		for (var i = 0; i < aDiv.length; i++) {
-			aDiv[i].style.background = "url(images/"+(i+1)+".jpg) center/cover";
-			aDiv[i].style.transform = "rotateY("+(i*36)+"deg) translate3d(0,0,350px)";
-			aDiv[i].style.transition = "transform 1s "+(aDiv.length-i)*0.2+"s";
-		}
-	var sX,
-		sY,
-		nX,
-		nY,
-		desX = 0,
-		desY = 0,
-		tX = 0,
-		tY = 10,
-		index = 0;//滚轮初始值
-	document.onmousedown = function(e){
-		clearInterval(obox.timer);
-		e = e || window.event;
-		var sX = e.clientX,
-			sY = e.clientY;
-			this.onmousemove = function(e){
-				e = e || window.event;
-				var nX = e.clientX,
-					nY = e.clientY;
-					 // 当前点的坐标和前一点的坐标差值
-					desX = nX - sX;
-					desY = nY - sY;
-                    tX += desX*0.1; 
-                    tY += desY*0.1;
+ <div class="box">
+  <div class="item "><a href="https://jingjing0304.github.io/huyaodong/"><img src="images/bj1.jpg"></a>
+  <h6> 这里面是我最爱的人<h6></div>
+  <div class="item"><a href="https://jingjing0304.github.io/yaodong/"><img src="images/bj2.jpg"></a>
+  <h6>这里是我想对她做的事 </h6></div>
+  <div class="item"><img src="images/bj3.jpg"></div>
+  <div class="item"><img src="images/bj4.jpg"></div>
+  
+ </div>
+ <div class="big">  
+    <div class="small"><a href="https://jingjing0304.github.io/miss/"><img src="images/bj5.jpg"></a><h6>我们一起看樱花吧</h6></div>
+    <div class="small"><a href="https://unsplash.com/s/photos/scennic-spot"><img src="images/bj6.jpg"></a><h6>没法出去玩来这里看看</h6></div>
+    <div class="small"></div>
+	
+</div> 
+<div class="miss">
+<h3><font color="#000000"> 在遇见你之前，我似乎没有体验过想念的感觉.小时候我妈出远门，我会莫明的哭，可那更像是一种本能。遇见你之后思念这种感觉就常常伴随着我，那怕不是分别很久，不是相隔很远.那怕只是你在隔屋教室上课.一句话、一张图片都能勾起我对你的思念，那一节课就变得漫长而又幸福。<br>
 
-					obox.style.transform = "rotateX("+(-tY)+"deg) rotateY("+tX+"deg)";
-					sX = nX;
-					sY = nY;
-			}
-			this.onmouseup = function(){
-				this.onmousemove = this.onmouseup = null;
-				obox.timer = setInterval(function(){
-					desX *= 0.95;
-					desY *= 0.95;
-					tX += desX*0.1;
-					tY += desY*0.1;
-					obox.style.transform = "rotateX("+(-tY)+"deg) rotateY("+tX+"deg)";
-					if (Math.abs(desX)<0.5 && Math.abs(desY)<0.5) {
-						clearInterval(obox.timer);
-					}
-				},13);
-			}
-		return false;
-	}
-	//滚轮放大缩小
-	mousewheel(document,function(e){
-		e = e || window.event;
-		var d = e.wheelDelta/120 || -e.detail/3;
-			if (d>0) {
-				index-=20;
-			}else{
-				index+=30;
-			}
-			(index<(-1050)&&(index=(-1050)));
-		document.body.style.perspective = 1000 + index + "px";
-	})
-	function mousewheel(obj,fn){
-		document.onmousewheel===null?obj.onmousewheel=fn:addEvent(obj,"DOMMouseScroll",fn)
-	}
-	function addEvent(obj,eName,fn){
-		obj.attachEvent?obj.attachEvent("on"+eName,fn):obj.addEventListener(eName,fn);
-	}
-}
-</script>
+      我好想你，每每你发一个抱抱的表情，我都恨不得立马出现在你身边，把你紧紧的拥入怀里，用胸膛感觉你额头的温度。我经常梦到你.在梦里我们在一块十分的幸福，梦醒了，你的言容笑貌还清晰地印在我的脑海，一个甜美的梦，都足以让我好几个晚上都有所期待的睡着。<br>
+
+      我的嘴不甜、我的灵魂不够浪漫，偶尔在网上学到的一些情话运用的又非常尴尬，但我还是想表达出我对你的想念，你对我的重要，就算是用最挫劣的方式，用最粗糙的语言。<br>我想念你的声音.想念你的笑容，想念你的温度，想念你身边空气的香味。我愿意相永远倒在你的怀里.拥在你的胸前.享受你的抚慰。<br>
+
+      我现在不能看到那些成双成对的人群.勾起我对你的思念我会嫉妒他们。<br>写到这我好想给你打电话呀.向你诉说‘我想你'可想这三个字在我的思念面前是那么有气无力“一寸相思，千万绪?<br>
+	  与你相识是一种缘，与你相恋是一种美.与你相伴是一种福。我愿永远和你在一起。<br>
+
+      好想为你写一封情书，可又怕文采不佳，辱了这份情.<br>
+
+      一页情书
+
+</font>
+
+</h3></div>
+<a href="https://jingjing0304.github.io/jingjing/"><p>最后还有彩蛋哟</p></a>
 </body>
 </html>
